@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<style>
+		pre {
+			background-color:lightgrey;
+			margin:11px;
+			padding:11px;
+			
+		}
+		code {
+			white-space:pre-line
+		}
+		@media print {
+			.noprint {
+				display:none;
+				padding:0px;
+				margin:0px;
+			}
+		}
+
+		.noprint {
+			padding:5px;
+			background-color:black;
+
+		}
+		.inlinecode {
+			background-color:lightgrey;
+			padding-left:11px;
+			padding-right:11px;
+			padding-top:2px;
+			padding-bottom:2px;
+			margin-bottom:2px;
+		}
+	</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+<div style="page-break-after: always;">
+<hr class="noprint">
+<h1>BASICS | The html structure layout</h1>
+	<h3>Important concepts:</h3>
+	<ul>
+		<li>HTML stands for <b>H</b>yper<b>t</b>ext <b>M</b>arkup <b>L</b>anguage</li>
+		<li>HTML is a series of "elements" or parts of a page. Each image, text block, link, button, and everything else on the page is a seperate element. These elements have opening and closing tags.</li>
+		<li>HTML is built by a browser from the top to the bottom. This is less important untill you start using JS.</li>
+	</ul>
+	<h3>Important Vocabulary:</h3>
+	<ul>
+		<li>Element | Part of a page</li>
+		<li>CSS | The code used to style the page</li>
+	</ul>
+<h3>Code:</h3>
+	<pre><code class="prettyprint">1 | &lt;!DOCTYPE html&gt;
+2 | &lt;html&gt;
+3 | &lt;head&gt;
+4 | 	&lt;title&gt;What shows up in the tab&lt;/title&gt;
+5 |	&lt;link href="style.css" rel="stylesheet"&gt;
+6 | 	anything that you want to load BEFORE the content
+7 | &lt;/head&gt;
+8 | &lt;body&gt;
+9 | 	The content of the site
+10| &lt;/body&gt;
+11| &lt;/html&gt;</code></pre>
+	<h3>Explanation:</h3>
+<pre><code>1 | Tells the browser what type of file it is loading - Not required in most modern browsers, but older versions of Internet Explorer need it.
+2 | First tag - your text editor will provide autofill when you are in html tags.
+3 | First part of the page - the head loads before all of the rest of your page. If you are using any external libraries, they will be identified <br> here (line 5).
+4 | The text that shows up in the tab at the top of the page. If not specified, it defaults to the file name.
+5 | Calls your stylesheet we will make later. This allows your page to be pretty
+6 | Any external libraries or files that need to be loaded (stylesheets, javascript, favicons)
+7 | Tells the page that it is done with the head tag
+8 | Opens the second part of the page - the body is where you will put all of the content of your site.
+9 | This is where almost everything will go
+10| Closing out the body element
+11| Telling the page you are done, and the site is ready for full use.
+</code></pre>
+<span style="float:right">BASICS | Html structure</span>
+</div>
+<br>
+<hr class="noprint">
+
+<div style="page-break-after: always">
+	<h1>BASICS | Tags</h1>
+	<h3>Code:</h3>
+	<pre><code class="prettyprint">&lt;tag class="class" id="id" name="name" src="source"&gt;stuff to show&lt;tag&gt;</code></pre>
+	<h3>Explanation:</h3>
+	We are going to break it up
+	<pre><code><span class="tag">&lt;tag</span> | Open the tag with "&lt;" then specify the tag.</code></pre>
+	<pre><code class="prettyprint">class="class"</code><code> | Specify the class, which controls styling. More on this later. (note the class can be named whatever you want)</code></pre>
+	<pre><code class="prettyprint">id="id"</code><code> | Gives the element a handle that Javascript can grab. You won't need this until you start using Javascript (note the id can be whatever you want it to be)</code></pre>
+	<pre><code class="prettyprint">name="name"</code><code> | Specify the name, which is used in forms. More on this much later. (note the name can be whatever you want it to be)</code></pre>
+	<pre><code class="prettyprint">src="source"</code><code> | Specify the source. This is used in javascript, videos, images, and datalist tags. More on this later. (note the source can be whatever you want</code></pre>
+	<pre><code><span class="tag">&gt;</span> | Closes the tag opener.</code></pre>
+	<pre><code>stuff to show | The inside of the tag. Usually this is text. Not all elements use it (E.G. images, inputs)</code></pre>
+	<pre><code><span class="tag">&lt;/tag&gt;</span> | Closes the tag. The "/" differentiates it from the opener</code></pre>
+	<br><br><br><br><br><br><br><br><br>
+	<span style="float:right">BASICS | Tags</span>
+</div>
+<br>
+<hr class="noprint">
+
+<div style="page-break-after: always">
+	<h1>BASICS | Tags Definitions</h1>
+	<pre><code class="prettyprint">&lt;div&gt;content&lt;/div&gt;</code><code> | A container to put other elements in. This is great for code organization and applying styles to multiple elements.</code></pre>
+	<pre><code class="prettyprint">&lt;h1&gt;content&lt;/h1&gt;</code><code> | Largest header</code></pre>
+	<pre><code class="prettyprint">&lt;h2&gt;content&lt;/h2&gt;</code><code> | Second largest header. Continues to h6, with size getting smaller as you go. <b>Should be only used for headers</b></code></pre>
+	<pre><code class="prettyprint">&lt;p&gt;content&lt;/p&gt;</code><code> | Paragraph tag - put your paragraphs in it.</code></pre>
+	<pre><code class="prettyprint">&lt;span&gt;content&lt;/span&gt;</code><code> | Inline text block. Great for highlighting and different colors in a paragraph.</code></pre>
+	<pre><code class="prettyprint">&lt;a href="location"&gt;content&lt;/a&gt;</code><code> | Link. The location you are going to goes in the href. NOTE: if you are linking to an external source, you must include http:// in the href.</code></pre>
+	<pre><code class="prettyprint">&lt;button&gt;content&lt;/button&gt;</code><code> | Button. Used for interaction with Javascript.</code></pre>
+	<pre><code class="prettyprint">&lt;b&gt;content&lt;/b&gt;</code><code> | Bold</code></pre>
+	<pre><code class="prettyprint">&lt;i&gt;content&lt;/i&gt;</code><code> | Italics</code></pre>
+	<pre><code class="prettyprint">&lt;u&gt;content&lt;/u&gt;</code><code> | Underline</code></pre>
+	<pre><code class="prettyprint">&lt;s&gt;content&lt;/s&gt;</code><code> | Strikethrough - puts a line crossing out the text.</code></pre>
+	<pre><code class="prettyprint">&lt;hr&gt;</code><code> | Horizontal line, great for page organization and seperating different sections.</code></pre>
+	<pre><code class="prettyprint">&lt;ul&gt;content&lt;/ul&gt;</code><code> | Bulleted (unorganized) list LOOK AT DEFINITION FOR &lt;li&gt;</code></pre>
+	<pre><code class="prettyprint">&lt;ol&gt;content&lt;/ol&gt;</code><code> | Numbered (organized) list LOOK AT DEFINITION FOR &lt;li&gt;</code></pre>
+	<pre><code class="prettyprint">&lt;li&gt;content&lt;/li&gt;</code><code> | List element - you need to put each bullet or number in one</code></pre>
+	<pre><code class="prettyprint">&lt;script&gt;content&lt;/script&gt;</code><code> | A method for imbedding Javascript in the page. Don't mess with it untill you know js.</code></pre>
+	<span style="float:right">BASICS | Tags Definitions</span>
+</div>
+<hr class="noprint">
+<div style="page-break-after: always">
+	<h1>GETTING STARTED | Divs</h1>
+	The div tag defines a devision or a section in an HTML document. It is often used with css to layout a web page. <sup>[1]</sup>
+	<br><br>
+	It can be used to create sections of a page with different background colors, font weights, sizes, font colors, and heights and widths.
+	<pre><code class="prettyprint">&lt;div&gt;content&lt;/div&gt;</code></pre>
+	Anything you want can be put in a div. 
+	<br><br><br>
+	<hr class="noprint">
+	<h1>GETTING STARTED | Text nodes</h1>
+	<h3>There are many ways to create text in HTML. Here are the most popular.<h3>
+	<h3>Choice 1: none</h3>
+	HTML supports just text. It dosen't need to be in a tag. 
+	<h3>Choice 2: p</h3>
+	<pre><code class="prettyprint">&lt;p&gt;content&lt;/p&gt;</code></pre>
+	The P tag is mainly used for paragraphs.
+	<h3>Choice 3: Span</h3>
+	<pre><code class="prettyprint">&lt;span&gt;content&lt;/span&gt;</code></pre>
+	The span tag is usually used for inline styling, like setting the color of a certain word.
+	<h4>More on spans</h4>
+	While usually bad practice, it is ok to use inline styling for spans. Inline styling is injecting css to a specific element without the use of classes. More on css later.
+	<pre><code class="prettyprint">&lt;span style="color:red"&gt;content&lt;/span&gt;</code></pre>
+	<span style="display:inline-block">This example will make the color of the word "content" to red.</span>
+	<span style="display:inline-block;float:right">STARTING | Divs & Text nodes</span>
+</div>
+
+<hr class="noprint">
+<div style="page-break-after: always">
+	<h1>GETTING STARTED | Images</h1>
+	To add an image, you need to know the file name and the file extension. <br>
+	This is case sensitive. This means the file "Image1.PNG" is not the same as "iMagE1.png"<br>
+	<pre><code class="prettyprint">&lt;img src="file.extension" alt="description if something goes wrong"&gt;</code></pre>
+	<br><br><br>
+	<h1>GETTING STARTED | Videos</h1>
+	Videos can be imported 2 ways: Embedding from Youtube or some other streaming service, or uploading a file yourself.<br>
+	This will provide the description for the second of the 2.<br><br>
+
+	<pre><code class="prettyprint">&lt;video width="320" height="240" controls&gt;<br><span style="padding-left:15px">&lt;source src="file.extension" type="video/extension"&gt;</span><br><span style="padding-left:15px">description if something goes wrong</span><br>&lt;/video&gt;<br></code></pre>
+
+	The width of 320 and height of 240 are arbitrary, but they work well for most videos. The units are pixels, and you can experiment with them.<br>
+	The modifier "controls" tells the page to load a play button, among other basic controls.<br>
+	If you want the video to play when the page is loaded, include the modifier "autoplay"
+<br><br><br>
+	<h1>GETTING STARTED | Links</h1>
+	Links in HTML can be used to go to other pages<br>
+	For linking to other sites, you need a path. If you are not using folders, it is just the filename.extension.<br>
+
+	<pre><code class="prettyprint">&lt;a href="path.extension"&gt;content&lt;/a&gt;</code></pre><br><br><br>
+	<span style="float:right;">GETTING STARTED | Images, Videos, and Links</span>
+
+</div>
+
+<hr class="noprint">
+<div style="page-break-after: always;">
+	<h1>GETTING STARTED | Titles</h1>
+	HTML has a few tags that are meant for titles (headers).<br>
+	<h3>The h1 tag</h3>
+	By default, the h1 tag is the largest, and should be used for main headers
+	<pre><code class="prettyprint">&lt;h1&gt;content&lt;/h1&gt;</code></pre>
+
+	<h3>The h2 tag</h3>
+	By default, the h2 tag is the second largest, and should be used for subtitles.
+	<pre><code class="prettyprint">&lt;h2&gt;content&lt;/h2&gt;</code></pre>
+
+	<h3>The h3, h4, h5, & h6 tags</h3>
+	These are more subtitle options. As the number in the tag increases, the size decreases.
+	<pre><code class="prettyprint">&lt;h3&gt;content&lt;/h3&gt;<br>&lt;h4&gt;content&lt;/h4&gt;<br>&lt;h5&gt;content&lt;/h5&gt;<br>&lt;h6&gt;content&lt;/h6&gt;</code></pre>
+	<pre><code class="prettyprint">&lt;h7&gt;content&lt;/h7&gt;</code><code style="color:red">    Actually no. the H tags only go up to 6.</code></pre>
+
+	<i>H tags should only be used for titles. Refer to the text nodes referance for page content.</i>
+
+	<br><br>
+
+	<h1>GETTING STARTED | Page Organization</h1>
+	Most programmers like to add comments to their code to remove a line from action without actually deleting it. It can also be used to create notes to yourself.
+	<pre><code class="prettyprint">HTML       | &lt;!-- content --&gt;</code></pre>
+	<pre><code class="prettyprint">CSS        | /*content*/</code></pre>
+	<pre><code class="prettyprint">Javascript | // content</code></pre>
+	<span style="float:right">GETTING STARTED | Titles & Page organization</span>
+<!-- content -->
+</div>
+
+<div style="page-break-after:always">
+	<h1>STYLING | Getting started</h1>
+	In HTML, we use a language called CSS (Cascading Style Sheets) to change the styles of the page.<br>
+	CSS Allows you to change almost everything visual.
+	<h3>CSS format</h3>
+	CSS uses <i>classes</i> to organize its efforts. The same class can be applied to multiple elements, allowing you to create consistent pages.<br>
+	To use CSS with an element, you must specify a class within it (refer to BASICS | Tags).
+	In css we must insert the basic following code:
+
+
+
+	<pre><code class="prettyprint">.classname {<br><br>}</code></pre>
+	The classname is what we told the element in the <code class="inlinecode">class=""</code> attribute.<br>
+	We must include a "." before the classname to tell CSS to look for elements with the class "classname".<br>
+	In between the curly brackets "{}" is where we put our styling code. It is important to add a semicolon ";" or the following lines <i>will not work.</i><br>
+	<h3>Preparing an environment</h3>
+	Create a new file. It's extension must be <code class="inlinecode">.css</code><br>
+	In HTML add the following line: 
+	<pre><code class="prettyprint">&lt;link href="filename.css" rel="stylesheet"&gt;</code></pre>
+	This will call in your external stylesheet.<br>
+	You can use the "style" tag to avoid having to import a stylesheet, but it is bad practice. Most tutorials (w3, stackoverflow, documentation) will use the style tag, but it is just to simplify the formatting of their tutorials. 
+
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<span style="float:right">STYLING | Getting Started</span>
+</div>
+<div style="page-break-after: always">
+	<h1>STYLING | Font</h1>
+	HTML:
+	<pre><code class="prettyprint">&lt;tag class="myclassname"&gt;content&lt;/tag&gt;</code></pre>
+	Replace the tag with h1, a, span, p, or many other tags.
+	<h3>Font color</h3>
+	
+	CSS:
+	<pre><code class="prettyprint">.myclassname {<br><span style="padding-left:15px">color:red;</span><br>}</code></pre>
+
+	<h3>Highlighting / background color</h3>
+	
+	CSS:
+	<pre><code class="prettyprint">.myclassname {<br><span style="padding-left:15px">background-color:yellow;</span><br>}</code></pre>
+
+	<h3>Font size</h3>
+	
+	CSS:
+	<pre><code class="prettyprint">.myclassname {<br><span style="padding-left:15px">font-size:15px;</span><br>}</code></pre>
+
+	<h3>Font outline</h3>
+
+	CSS:
+	<pre><code class="prettyprint">.myclassname {<br><span style="padding-left:15px">-webkit-text-stroke: 1px black;</span><br>}</code></pre>
+
+
+	<h3>Other details</h3>
+	<span>For colors, CSS can use names <code class="inlinecode">red, blue, pink, lightgrey, etc</code>, hex codes <code class="inlinecode">#a1a1a1</code>, transparent <code class="inlinecode">transparent</code>, or RGB <code class="inlinecode">rgb(255,255,255)</code></span><span style="float:right;">STYLING | Getting Started</span>
+</div>
+
+<div style="page-break-after: always">
+	<h1>EXCERCISE | Title banner</h1>
+	The title banner - a staple in every website. We can make a title over an image or a video.<br>
+	But first we need a image or video, and a title.
+	<h3>Lets get started!</h3>
+	<h3>HTML: (image)</h3>
+	<pre><code class="prettyprint">&lt;div class="header-container"&gt;
+			<span style="padding-left:15px">&lt;img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/62/30/9157aa94e693d90.jpg" width="100%"&gt;</span>
+			<span style="padding-left:15px">&lt;div class="title"&gt;The Title&lt;/div&gt;</span>
+			<span style="padding-left:15px">&lt;div class="subtitle"&gt;The Subtitle&lt;/div&gt;</span>
+		&lt;/div&gt;
+	</code></pre>
+	<h3>CSS:</h3>
+	<pre><code class="prettyprint">.header-container {
+		  <span style="padding-left:15px">position: relative;</span>
+		  <span style="padding-left:15px">text-align: center;</span>
+		  <span style="padding-left:15px">color: white;</span>
+		}
+		.title {
+		  <span style="padding-left:15px">position: absolute;</span>
+		  <span style="padding-left:15px">top: 45%;</span>
+		  <span style="padding-left:15px">left: 50%;</span>
+		  <span style="padding-left:15px">transform: translate(-50%, -50%);</span>
+		  <span style="padding-left:15px">font-size:45px;</span>
+		}
+		.subtitle {
+		  <span style="padding-left:15px">position: absolute;</span>
+		  <span style="padding-left:15px">top: 55%;</span>
+		  <span style="padding-left:15px">left: 50%;</span>
+		  <span style="padding-left:15px">transform: translate(-50%, -50%);</span>
+		}
+		html, body { /*we do not use the . before the class name because we are styling tags, not classes. Usually a bad practice, but excusable for the HTML and Body tags.*/
+		  <span style="padding-left:15px">padding: 0;</span>
+		  <span style="padding-left:15px">margin: 0;</span>
+		}
+	</code></pre>
+	<h3>And the result:</h3>
+	<center><img src="http://jackcrane.github.io/htmllessons1.JPG" height="110px"></center>
+	<span style="float:right">EXCERCISE | Banner</span>
+</div>
+
+
+
+<div style="page-break-after: always">
+	<h1>EXCERCISE | Title banner continued</h1>
+	The title banner - a staple in every website. We can make a title over an image or a video.<br>
+	But first we need a image or video, and a title.
+	<h3>Lets get started!</h3>
+	<h3>HTML: (video)</h3>
+	<pre><code class="prettyprint">&lt;div class="header-container"&gt;
+	<span style="padding-left:15px">&lt;video autoplay loop muted width="100%"&gt;</span>
+		<span style="padding-left:30px">&lt;source src="banner.mp4" type="video/mp4"&gt;</span>
+		<span style="padding-left:30px">Text to load in the face of an error</span>
+	<span style="padding-left:15px">&lt;/video&gt;</span>
+	<span style="padding-left:15px">&lt;div class="title"&gt;The Title&lt;/div&gt;</span>
+	<span style="padding-left:15px">&lt;div class="subtitle"&gt;The Subtitle&lt;/div&gt;</span>
+&lt;/div&gt;
+	</code></pre>
+	<h3>CSS:</h3>
+	<pre><code class="prettyprint">.header-container {
+<span style="padding-left:15px">position: relative;</span>
+<span style="padding-left:15px">text-align: center;</span>
+<span style="padding-left:15px">color: white;</span>
+}
+.title {
+<span style="padding-left:15px">position: absolute;</span>
+<span style="padding-left:15px">top: 45%;</span>
+<span style="padding-left:15px">left: 50%;</span>
+<span style="padding-left:15px">transform: translate(-50%, -50%);</span>
+<span style="padding-left:15px">font-size:50px;</span>
+<span style="padding-left:15px">-webkit-text-stroke: 1px black;</span>
+}
+.subtitle {
+<span style="padding-left:15px">position: absolute;</span>
+<span style="padding-left:15px">top: 55%;</span>
+<span style="padding-left:15px">left: 50%;</span>
+<span style="padding-left:15px">transform: translate(-50%, -50%);</span>
+}
+html, body { /*we do not use the . before the class name because we are styling tags, not classes. Usually a bad practice, but excusable for the HTML and Body tags.*/
+<span style="padding-left:15px">padding: 0;</span>
+<span style="padding-left:15px">margin: 0;</span>
+}
+	</code></pre>
+	Most browsers cannot run the autorun argument if the muted argument is there. If you want the user to be able to control the video, add the control attribute.<br><br><br><br>
+	<span style="float:right">EXCERCISE | Banner</span>
+</div>
+
+
+</body>
+</html>
