@@ -1,34 +1,5 @@
-<div class="header-container">
-	<video autoplay loop muted width="50%">
-		<source src="banner.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	<div class="title">The Title</div>
-	<div class="subtitle">The Subtitle</div>
-</div>
-
-<style>
-.header-container {
-position: relative;
-text-align: center;
-color: white;
-}
-.title {
-position: absolute;
-top: 45%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size:50px;
--webkit-text-stroke: 1px black;
-}
-.subtitle {
-position: absolute;
-top: 55%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-html, body { /*we do not use the . before the class name because we are styling tags, not classes. Usually a bad practice, but excusable for the HTML and Body tags.*/
-padding: 0;
-margin: 0;
-}
-</style>
+&lt;form action="https://formspree.io/your@email.com" method="POST"&gt;  &lt;!-- REPLACE your@email.com with your email. OTHERWISE LEAVE THIS LINE BE --&gt;
+  <span style="padding-left:15px">&lt;input type="text" placeholder="The text to show in the box before any input" name="detail" &gt;  &lt;!-- Replace detail with what you want the field to be named in your results.  --&gt;</span>
+  <span style="padding-left:15px">&lt;input type="email" placeholder="your email" name="_replyto"&gt;  &lt;!-- DO NOT CHANGE ANY OF THIS LINE except for the placeholder= attribute --&gt;</span>
+  <span style="padding-left:15px">&lt;input type="submit" value="Send"&gt;  &lt;!-- DO NOT CHANGE ANY OF THIS LINE --&gt;</span>
+&lt;/form&gt;

@@ -349,6 +349,79 @@ html, body { /*we do not use the . before the class name because we are styling 
 	<span style="float:right">EXCERCISE | Banner</span>
 </div>
 
+<div style="page-break-after: always">
+	<h1>EXCERCISE | Image and description</h1>
+	Here is a simple and popular means of including images and describing what they are. This is a great way to share content.<br>
+	<h3>HTML:</h3>
+	<pre><code class="prettyprint">&lt;div class="master"&gt;
+	<span style="padding-left:15px">&lt;img src="content.jpg" class="left"&gt;</span>
+	<span style="padding-left:15px">&lt;div class="right"&gt;content&lt;/div&gt;</span>
+&lt;/div&gt;
+	</code></pre>
+	<h3>CSS:</h3>
+	<pre><code class="prettyprint">.master {
+	<span style="padding-left:15px">display:inline-block;</span>
+	<span style="padding-left:15px">width:100%;</span>
+	<span style="padding-left:15px">border:1px solid black;</span>
+}
+.left {
+	<span style="padding-left:15px">float:left;</span>
+	<span style="padding-left:15px">width:30%;</span>
+	<span style="padding-left:15px">padding-right:1%;</span>
+}
+.right {
+	<span style="padding-left:15px">float:right;</span>
+	<span style="padding-left:15px">width:68%;</span>
+	<span style="padding-left:15px">padding-left:1%;</span>
+}
+</code></pre>
+This can be used for way more than images though. Replace the img with a div and put anything you want in it, and you will have 2 divs next to eachother. 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><span style="float:right">EXCERCISE | Image and description</span>
+</div>
+
+<div style="page-break-after: always">
+	<h1>EXCERCISE | Creating a contact us</h1>
+	Crucial for creating an effective web presence, there are 2 primary ways to create a contactus form.
+	<h3>Option 1:</h3>
+	A mailto link<br>
+	A mailto link is just like any other link, but it opens an email window.
+	<pre><code class="prettyprint">&lt;a href="mailto:you@example.com&gt;Send us an email!&lt;/a&gt;</code></pre>
+	<h3>Option 2:</h3>
+	A form.<br>
+	Forms work with server-side code called PHP, which I will not be going into, as GitHub does not support it. Instead, we will use a free service called FormSpree.<br>
+	<pre><code class="prettyprint">&lt;form action="https://formspree.io/your@email.com" method="POST"&gt;  &lt;!-- REPLACE your@email.com with your email. OTHERWISE LEAVE THIS LINE BE --&gt;
+  <span style="padding-left:15px">&lt;input type="text" placeholder="The text to show in the box before any input" name="detail" &gt;  &lt;!-- Replace detail with what you want the field to be named in your results.  --&gt;</span>
+  <span style="padding-left:15px">&lt;input type="email" placeholder="your email" name="_replyto"&gt;  &lt;!-- DO NOT CHANGE ANY OF THIS LINE except for the placeholder= attribute --&gt;</span>
+  <span style="padding-left:15px">&lt;input type="submit" value="Send"&gt;  &lt;!-- DO NOT CHANGE ANY OF THIS LINE --&gt;</span>
+&lt;/form&gt;
+	</code></pre>
+	One more task: send a test response, and verify your email. (Formspree must be run on a web server, so don't do this untill it is on the web.)<br>
+	Now when someone fills out the form on your website, you will get an email with their response, and you can reply directly to them!
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><span style="float:right">EXCERCISE: Creating a contact us</span>
+</div>
+	<h1>Some final notes</h1>
+	Personally, I find the default font to be ugly. To overcome that, I go to fonts.google.com and choose one I like. My current favorite is a simple open sans. To import add this line to the head element of your page:
+	<pre><code class="prettyprint">&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"&gt;</code></pre>
+	And in your stylesheet:
+	<pre><code class="prettyprint">font-family: 'Open Sans', sans-serif;</code></pre>
+	And your done!
+	<br><br>
+	<h3>Recources</h3>
+	Ask any developer, and they will tell you that a lot of research is required. Don't expect yourself to know all you will ever need. <br>
+	A great resource is w3schools.com. They have tutorials for anything you could want to do.<br>
+	For styling tricks, check out css-tricks.com.<br>
+	And for millions of cool fonts check out fonts.google.com
+
+	<br><br>
+<h3>Closing</h3>
+	For today's lesson plan, powerpoint, and everything else, including code to copy and paste, go to github.com/htmllessons/htmllessons.github.io
+
+	<br><br>
+
+	Thank you, If you need any help at any point in your development, styling, html, javascript, and anything else, feel free to write me an email at 3jbc22@gmail.com.
+<br><br>
+Jack Crane
+
 
 </body>
 </html>
