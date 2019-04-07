@@ -60,24 +60,26 @@
 3 | &lt;head&gt;
 4 | 	&lt;title&gt;What shows up in the tab&lt;/title&gt;
 5 |	&lt;link href="style.css" rel="stylesheet"&gt;
-6 | 	anything that you want to load BEFORE the content
-7 | &lt;/head&gt;
-8 | &lt;body&gt;
-9 | 	The content of the site
-10| &lt;/body&gt;
-11| &lt;/html&gt;</code></pre>
+6 | &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+7 | 	anything that you want to load BEFORE the content
+8 | &lt;/head&gt;
+9 | &lt;body&gt;
+10| 	The content of the site
+11| &lt;/body&gt;
+12| &lt;/html&gt;</code></pre>
 	<h3>Explanation:</h3>
 <pre><code>1 | Tells the browser what type of file it is loading - Not required in most modern browsers, but older versions of Internet Explorer need it.
 2 | First tag - your text editor will provide autofill when you are in html tags.
 3 | First part of the page - the head loads before all of the rest of your page. If you are using any external libraries, they will be identified <br> here (line 5).
 4 | The text that shows up in the tab at the top of the page. If not specified, it defaults to the file name.
 5 | Calls your stylesheet we will make later. This allows your page to be pretty
-6 | Any external libraries or files that need to be loaded (stylesheets, javascript, favicons)
-7 | Tells the page that it is done with the head tag
-8 | Opens the second part of the page - the body is where you will put all of the content of your site.
-9 | This is where almost everything will go
-10| Closing out the body element
-11| Telling the page you are done, and the site is ready for full use.
+6 | Tells the browser what size works for the website
+7 | Any external libraries or files that need to be loaded (stylesheets, javascript, favicons)
+8 | Tells the page that it is done with the head tag
+9 | Opens the second part of the page - the body is where you will put all of the content of your site.
+10| This is where almost everything will go
+11| Closing out the body element
+12| Telling the page you are done, and the site is ready for full use.
 </code></pre>
 <span style="float:right">BASICS | Html structure</span>
 </div>
@@ -298,8 +300,7 @@
 		  <span style="padding-left:15px">margin: 0;</span>
 		}
 	</code></pre>
-	<h3>And the result:</h3>
-	<center><img src="http://jackcrane.github.io/htmllessons1.JPG" height="110px"></center>
+
 	<span style="float:right">EXCERCISE | Banner</span>
 </div>
 
